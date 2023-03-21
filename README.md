@@ -21,5 +21,5 @@ Here are the basic steps to get started using this repository.
 2. Run ```docker-compose up``` in the root directory
 3. Navigate to the localhost address that is produced by the above command (CTRL + click for VS Code)
 4. You may have to upload the data files and notebook to the pyspark instance ([Instructions](https://jupyterlab.readthedocs.io/en/stable/user/files.html))
-5. Run the code.
+5. Run the [code](../Basic-Stock-Analysis-with-PySpark/basic_lin_reg.ipynb).
 
