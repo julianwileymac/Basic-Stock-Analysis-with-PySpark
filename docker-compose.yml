@@ -1,0 +1,10 @@
+version: 1.0
+
+services:
+  spark:
+    image: jupyter/pyspark-notebook:latest
+  ports:
+    - "8888:8888"
+    - "4040-4080:4040-4080"
+  volumes:
+    - ./notebooks:/home/julian/Documents/Coding/Basic-Stock-Analysis-with-PySpark/notebooks/
