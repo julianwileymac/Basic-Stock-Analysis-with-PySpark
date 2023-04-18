@@ -1,10 +1,26 @@
 version: "3.0"
-
+networks:
+  pyspark-net:
 services:
   spark:
     image: jupyter/pyspark-notebook:latest
+    working_dir: /home/julia/
+    environment:
+      CHOWN_HOME: "yes"
+#      GRANT_SUDO: "yes"
+#      NB_UID: 1000
+#      NB_GID: 100
+      NB_USER: julia
+#     NB_GROUP: Administrators
+    user: root
     ports:
       - "8888:8888"
       - "4040-4080:4040-4080"
+    networks:
+    - pyspark-net
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
     volumes:
-      - ./notebooks:/home/julian/Documents/Coding/Basic-Stock-Analysis-with-PySpark/notebooks/
+      - ./:/home/julia/notebooks/

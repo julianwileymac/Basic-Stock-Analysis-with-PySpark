@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+/data/nasdaq100
+/data/AMZN.parquet
+/data/FB.parquet
+/data/GOOG.parquet
+/data/NFLX.parquet
